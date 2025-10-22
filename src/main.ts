@@ -16,30 +16,30 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <img src="/profile.jpg" alt="0xleal" class="profile-image" />
         <div class="profile-text">
           <div class="title">
-            Engineer/Cofounder of <a href="https://x.com/talentprotocol" target="_blank" rel="noopener noreferrer">@talentprotocol</a>
+            engineer/cofounder of <a href="https://x.com/talentprotocol" target="_blank" rel="noopener noreferrer">@talentprotocol</a>
           </div>
         </div>
       </div>
 
       <p class="subtitle">
-        Passionate about tech, chess and muay thai. I enjoy building for myself and others.
+        passionate about tech, chess and muay thai. i enjoy building for myself and others.
       </p>
 
       <p class="note">
-        This domain also hosts my personal self-hosted software.
+        this domain also hosts my personal self-hosted software.
       </p>
 
       <nav class="links">
-        <a href="https://twitter.com/0xleal" target="_blank" rel="noopener noreferrer">twitter</a>
+        <a href="https://x.com/0x_leal" target="_blank" rel="noopener noreferrer">x/twitter</a>
         <a href="https://github.com/0xleal" target="_blank" rel="noopener noreferrer">github</a>
-        <a href="https://warpcast.com/0xleal" target="_blank" rel="noopener noreferrer">farcaster</a>
+        <a href="https://farcaster.xyz/leal.eth" target="_blank" rel="noopener noreferrer">farcaster</a>
       </nav>
 
       <div class="prompt" id="prompt">
         <span class="prompt-symbol">$</span>
         <span class="cursor"></span>
       </div>
-      <div class="easter-egg" id="easter-egg">You thought this would do something ugh? Well maybe some day it will</div>
+      <div class="easter-egg" id="easter-egg">you thought this would do something ugh? well maybe some day it will</div>
     </div>
   </div>
 `
