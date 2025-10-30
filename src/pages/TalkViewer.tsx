@@ -26,8 +26,8 @@ function TalkViewer() {
     // This regex handles: \n---\n, \n\n---\n\n, etc.
     const slides = markdown
       .split(/\n\s*---\s*\n/)
-      .map(slide => slide.trim())
-      .filter(slide => slide.length > 0);
+      .map((slide) => slide.trim())
+      .filter((slide) => slide.length > 0);
 
     return slides.length > 0 ? slides : ["No content found"];
   };
@@ -35,13 +35,17 @@ function TalkViewer() {
   // Load talk markdown file
   useEffect(() => {
     if (!slug) {
-      setState(prev => ({ ...prev, error: "No slug provided", loading: false }));
+      setState((prev) => ({
+        ...prev,
+        error: "No slug provided",
+        loading: false,
+      }));
       return;
     }
 
     const loadTalk = async () => {
       try {
-        setState(prev => ({ ...prev, loading: true, error: null }));
+        setState((prev) => ({ ...prev, loading: true, error: null }));
 
         const response = await fetch(`/talks/${slug}.md`);
 
@@ -49,7 +53,7 @@ function TalkViewer() {
           throw new Error(
             response.status === 404
               ? `Talk "${slug}" not found`
-              : `Failed to load talk (${response.status})`
+              : `Failed to load talk (${response.status})`,
           );
         }
 
@@ -59,7 +63,10 @@ function TalkViewer() {
         // Check if there's a hash in URL for initial slide
         const hash = window.location.hash.replace("#", "");
         const initialSlide = hash ? parseInt(hash, 10) - 1 : 0;
-        const validSlide = Math.max(0, Math.min(initialSlide, slides.length - 1));
+        const validSlide = Math.max(
+          0,
+          Math.min(initialSlide, slides.length - 1),
+        );
 
         setState({
           slides,
@@ -89,7 +96,7 @@ function TalkViewer() {
 
   // Navigation functions
   const goToSlide = useCallback((index: number) => {
-    setState(prev => ({
+    setState((prev) => ({
       ...prev,
       currentSlide: Math.max(0, Math.min(index, prev.slides.length - 1)),
     }));
@@ -119,7 +126,18 @@ function TalkViewer() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Prevent default for navigation keys to avoid page scrolling
-      if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", " ", "Home", "End", "Escape"].includes(e.key)) {
+      if (
+        [
+          "ArrowLeft",
+          "ArrowRight",
+          "ArrowUp",
+          "ArrowDown",
+          " ",
+          "Home",
+          "End",
+          "Escape",
+        ].includes(e.key)
+      ) {
         e.preventDefault();
       }
 
@@ -195,7 +213,7 @@ function TalkViewer() {
           />
         </div>
         <div className="slide-hints">
-          <span className="hint">← → Navigate</span>
+          <span className="hint">⬅️ ➡️ Navigate</span>
           <span className="hint">ESC Exit</span>
         </div>
       </div>
