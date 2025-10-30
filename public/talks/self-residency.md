@@ -58,6 +58,7 @@ Cryptographic Proof (30 days)
 Recipients claim tokens by proving they're compliant humans
 
 ```
+
 ┌─────────────┐
 │   Creator   │
 │  Sets Rules │
@@ -87,6 +88,7 @@ Recipients claim tokens by proving they're compliant humans
 Sender verifies once, batch-sends to thousands
 
 ```
+
 ┌──────────────────┐
 │     Sender       │
 │ Self Verified ✓  │
@@ -153,9 +155,10 @@ Most tokens focus on content or memes.
 ## Human-Verified Launches
 
 ```
+
 ┌─────────────────┐
 │  Token Creator  │
-│  (Self Verified)│
+│ (Self Verified) │
 └────────┬────────┘
          │
          ↓
@@ -183,10 +186,11 @@ Removes bot exploitation from fair launches
 Make building more **engaging**, **open**, and **accountable**
 
 ```
+
 ┌──────────────────┐
 │  Builder Sets    │
 │  Public Goal     │
-│  "10k users by Q2"│
+│ "10k users by Q2"│
 └────────┬─────────┘
          │
          ↓
@@ -232,9 +236,10 @@ Goals must be **trackable onchain** or use a **specialized oracle**
 ## The Full Picture
 
 ```
+
                     ┌─────────────────┐
                     │   Self Network  │
-                    │  ZK Identity    │
+                    │    ZK Identity  │
                     └────────┬────────┘
                              │
                 ┌────────────┴───────────┐
@@ -251,10 +256,10 @@ Goals must be **trackable onchain** or use a **specialized oracle**
             └────────┬───────────────┘
                      │
                      ↓
-           ┌────────────────┐
-           │  Open Source   │
-           │  Infrastructure│
-           └────────────────┘
+             ┌────────────────┐
+             │  Open Source   │
+             │ Infrastructure │
+             └────────────────┘
 ```
 
 ---
@@ -293,16 +298,6 @@ Goals must be **trackable onchain** or use a **specialized oracle**
 
 ---
 
-## Tech Stack Highlights
-
-- Self Network for ZK identity
-- Solidity smart contracts
-- Uniswap v4 hooks
-- ERC8021 for attribution
-- Verifiable computation oracles
-
----
-
 # Building the Future
 
 Where compliance meets privacy.
@@ -326,4 +321,4 @@ Built during Self Residency Week 3
 
 ## Questions?
 
-Let's build compliant, human-first infrastructure together.
+Time to build human-first solutions.
