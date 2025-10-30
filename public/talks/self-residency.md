@@ -123,13 +123,11 @@ Traditional multi-send: O(n) gas cost (exponential growth)
 Gas Cost Comparison (sending to 1000 addresses)
 
 Traditional:  ████████████████████████  ~$500
-Multi-Send:   ███████                   ~$150
-
-Traditional:  Check × 1000
-Multi-Send:   Verify once + batch process
+Crypto:       ███████                   ~$50
+Multi-Send:   ██                        ~$1
 ```
 
-Supports >1,000 addresses in a single transaction
+Standard crypto transfers dont support more than 200 addresses. Multi-send supports >1,000 addresses in a single transaction
 
 ---
 
