@@ -318,11 +318,12 @@ body {
 }
 
 .slide-markdown code.inline-code {
-  background-color: var(--terminal-border);
   color: var(--accent);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
-  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-family:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
   font-size: 0.9em;
 }
 
@@ -337,7 +338,9 @@ body {
 
 .slide-markdown pre code {
   color: var(--text);
-  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-family:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -394,7 +397,9 @@ body {
   color: var(--text-muted);
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
-  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-family:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
 }
 
 .slide-progress {
@@ -421,7 +426,9 @@ body {
 }
 
 .slide-hints .hint {
-  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-family:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
 }
 
 /* Responsive adjustments for talk viewer */
