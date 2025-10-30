@@ -36,6 +36,11 @@ body {
   width: 100%;
 }
 
+/* Wider container for talk presentations */
+#app:has(.talk-viewer) {
+  max-width: 900px;
+}
+
 .terminal {
   background-color: var(--terminal-bg);
   border: 1px solid var(--terminal-border);
@@ -202,6 +207,249 @@ body {
   51%,
   100% {
     opacity: 0;
+  }
+}
+
+/* Talk Viewer Styles */
+.talk-viewer {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  min-height: 400px;
+}
+
+.slide-content.error {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.loading-message {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.back-button {
+  background-color: var(--terminal-border);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+/* Slide Markdown Content */
+.slide-markdown {
+  width: 100%;
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.slide-markdown h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.slide-markdown h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.slide-markdown h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.slide-markdown h4,
+.slide-markdown h5,
+.slide-markdown h6 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.slide-markdown p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.slide-markdown ul,
+.slide-markdown ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.slide-markdown li {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.slide-markdown a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.slide-markdown a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.slide-markdown code.inline-code {
+  background-color: var(--terminal-border);
+  color: var(--accent);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+.slide-markdown pre {
+  background-color: var(--bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.slide-markdown pre code {
+  color: var(--text);
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.slide-markdown blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.slide-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.slide-markdown th,
+.slide-markdown td {
+  border: 1px solid var(--terminal-border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.slide-markdown th {
+  background-color: var(--terminal-border);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.slide-markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.slide-markdown hr {
+  border: none;
+  border-top: 1px solid var(--terminal-border);
+  margin: 2rem 0;
+}
+
+/* Slide Controls */
+.slide-controls {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--terminal-border);
+}
+
+.slide-counter {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+}
+
+.slide-progress {
+  width: 100%;
+  height: 3px;
+  background-color: var(--terminal-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.slide-progress-bar {
+  height: 100%;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.slide-hints {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.slide-hints .hint {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+}
+
+/* Responsive adjustments for talk viewer */
+@media (max-width: 640px) {
+  .slide-markdown {
+    font-size: 0.95rem;
+  }
+
+  .slide-markdown h1 {
+    font-size: 1.75rem;
+  }
+
+  .slide-markdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide-markdown h3 {
+    font-size: 1.25rem;
+  }
+
+  .slide-content {
+    padding: 1rem 0;
+    min-height: 300px;
+  }
+
+  .slide-hints {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
